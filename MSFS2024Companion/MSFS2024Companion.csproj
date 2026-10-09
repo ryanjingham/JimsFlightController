@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	<OutputType>WinExe</OutputType>
+	<TargetFramework>net8.0-windows</TargetFramework>
+	<Nullable>enable</Nullable>
+	<ImplicitUsings>enable</ImplicitUsings>
+	<UseWPF>true</UseWPF>
+	<GenerateDocumentationFile>true</GenerateDocumentationFile>
+	<NoWarn>$(NoWarn);CS1591</NoWarn>
+	<EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+	<AnalysisLevel>latest-recommended</AnalysisLevel>
+	<MSFSSdkPath>C:\MSFS 2024 SDK\SimConnect SDK</MSFSSdkPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<Reference Include="Microsoft.FlightSimulator.SimConnect">
+	  <HintPath>$(MSFSSdkPath)\lib\managed\Microsoft.FlightSimulator.SimConnect.dll</HintPath>
+	  <Private>true</Private>
+	</Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+	<None Include="$(MSFSSdkPath)\lib\SimConnect.dll">
+	  <Link>SimConnect.dll</Link>
+	  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	</None>
+  </ItemGroup>
+</Project>
