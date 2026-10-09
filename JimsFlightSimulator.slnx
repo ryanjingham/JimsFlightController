@@ -2,5 +2,5 @@
 	<ProjectReference Include="MSFS2024Companion\JimsFlightController.csproj">
 		<Name>MSFS2024Companion</Name>
 	</ProjectReference>
-  <Project Path="MSFS2024Companion/JimsFlightController.csproj" />
+  <Project Path="JimsFlightController/JimsFlightController.csproj" />
 </Solution>
